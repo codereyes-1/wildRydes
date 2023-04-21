@@ -86,7 +86,7 @@ WildRydes.map = WildRydes.map || {};
         var dest = WildRydes.map.selectedPoint;
         var origin = {};
         var speed = 900;
-        var easing = 'swing'
+        var easing = swing
 
         if (dest.latitude > WildRydes.map.center.latitude) {
             origin.latitude = WildRydes.map.extent.minLat;
