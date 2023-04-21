@@ -90,7 +90,7 @@ WildRydes.map = WildRydes.map || {};
         if (dest.latitude > WildRydes.map.center.latitude) {
             origin.latitude = WildRydes.map.extent.minLat;
         } else {
-            origin.latitude = WildRydes.map.extent.animate(origin, dest, speed);
+            origin.latitude = WildRydes.map.extent.animate(origin, dest, speed, callback);
         }
 
         if (dest.longitude > WildRydes.map.center.longitude) {
