@@ -46,7 +46,7 @@ WildRydes.map = WildRydes.map || {};
         pronoun = unicorn.Gender === 'Male' ? 'his' : 'her';
         displayUpdate(unicorn.Name + ', your ' + unicorn.Color + ' unicorn, is on ' + pronoun + ' way.');
         animateArrival(function animateCallback() {
-            displayUpdate(unicorn.Name + ' has arrived. Giddy up!');
+            displayUpdate(unicorn.Name + ', your Unicorn, has arrived. Giddy up!');
             WildRydes.map.unsetLocation();
             $('#request').prop('disabled', 'disabled');
             $('#request').text('Set Pickup');
@@ -85,6 +85,7 @@ WildRydes.map = WildRydes.map || {};
     function animateArrival(callback) {
         var dest = WildRydes.map.selectedPoint;
         var origin = {};
+        var speed = 900;
 
         if (dest.latitude > WildRydes.map.center.latitude) {
             origin.latitude = WildRydes.map.extent.minLat;
@@ -97,8 +98,9 @@ WildRydes.map = WildRydes.map || {};
         } else {
             origin.longitude = WildRydes.map.extent.maxLng;
         }
+        
 
-        WildRydes.map.animate(origin, dest, callback);
+        WildRydes.map.animate(origin, dest, speed, callback);
     }
 
     function displayUpdate(text) {
