@@ -85,12 +85,12 @@ WildRydes.map = WildRydes.map || {};
     function animateArrival(callback) {
         var dest = WildRydes.map.selectedPoint;
         var origin = {};
-        var speed = 1200;
+        var speed = 1600;
 
         if (dest.latitude > WildRydes.map.center.latitude) {
             origin.latitude = WildRydes.map.extent.minLat;
         } else {
-            origin.latitude = WildRydes.map.extent.maxLat;
+            origin.latitude = WildRydes.map.extent.animate(origin, dest, speed);
         }
 
         if (dest.longitude > WildRydes.map.center.longitude) {
