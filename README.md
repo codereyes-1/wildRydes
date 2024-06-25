@@ -1,5 +1,5 @@
 # wildRydes
-AWS hosted app using Amplify, AP Lambda, 
+AWS hosted app using Amplify, Gateway API, Lambda
 
 The application architecture uses AWS Lambda, DynamoDB, API Gateway, Amazon Cognito, and Amplify Console.
 
