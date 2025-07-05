@@ -218,7 +218,7 @@ WildRydes.map = WildRydes.map || {};
         }
 
         WildRydes.map.animate(origin, dest, speed, callback);
-    }
+    }``
 
     function displayUpdate(text) {
         $('#updates').append($('<li>' + text + '</li>'));
